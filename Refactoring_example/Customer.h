@@ -21,6 +21,7 @@ public:
 		return _name;
 	}
 	string statement();
+ int  renterPoints(Rental& each);
 
 	double amountFor(Rental each);
 
