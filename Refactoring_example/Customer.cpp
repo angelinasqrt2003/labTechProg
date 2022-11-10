@@ -33,7 +33,7 @@ double Customer::getTotalChange()
 
 {
 	double totalAmount = 0;
-	for (auto& each : _rentals) {
+	for (auto& each : Customer::_rentals) {
 		double thisAmount = each.getCharge();
 		totalAmount += thisAmount;
 
