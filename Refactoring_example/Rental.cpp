@@ -2,17 +2,13 @@
 
 double Rental::getCharge()
 {
-	return _movie.getChange(_daysRented);
+	return _movie.getCharge(_daysRented);
 }
-int Rental::renterPoints()
+int Rental::getBonus()
 {
-	int bonousPoint = 1;
 
-	if ((this->getMovie().getPriceCode() == Movie::NEW_RELEASE) &&
-		this->getDaysRented() > 1)
-		bonousPoint++;
 
-	return bonousPoint;
+	return _movie.getBonus(Rental::_daysRented);
 }
 
 

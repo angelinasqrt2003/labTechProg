@@ -65,8 +65,18 @@ public:
 	string getTitle() {
 		return _title;
 	}
-	double getChange(int daysRented) {
-		return _price->getCharge(daysRented);
+	
+	int getBonus()
+	{
+		int bonousPoint = 1;
+
+		if ((getPriceCode() == Movie::NEW_RELEASE) &&
+			daysRented > 1)
+			bonousPoint++;
+
+		return _price->getBonus();
 	}
+
+
 };
 

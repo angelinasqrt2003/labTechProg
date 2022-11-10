@@ -17,3 +17,11 @@ double NewReleasePrice::getCharge(int daysRented)
 	return result;
 }
 
+int NewReleasePrice::getBonus(int daysRented)
+{
+	int bonusPoint = Price::getBonus(daysRented);
+
+	if ( daysRented > 1)
+		bonusPoint++;
+	return bonusPoint;
+}
