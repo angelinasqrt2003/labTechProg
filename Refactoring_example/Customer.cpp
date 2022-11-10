@@ -8,6 +8,8 @@ string Customer::statement() {
 	for (auto& each : _rentals) {
 		double thisAmount = each.getCharge();
 
+		//frequentRenterPoints += each.get();
+
 		// Начисление бонусных очков
 		frequentRenterPoints +=each.renterPoints();
 
@@ -27,3 +29,14 @@ string Customer::statement() {
 
 
 
+double Customer::getTotalChange()
+
+{
+	double totalAmount = 0;
+	for (auto& each : _rentals) {
+		double thisAmount = each.getCharge();
+		totalAmount += thisAmount;
+
+	}
+	return totalAmount;
+}
